@@ -10,7 +10,7 @@ dy/dt = ( (64.0/1000)*(Math.sqrt(2*g*y)) )/(Math.pow(y, 2))
 
 #Methods
 
-+Forward Euler
-+Backward Euler
-+Modified Euler
-+Predictor Corrector
++ Forward Euler
++ Backward Euler
++ Modified Euler
++ Predictor Corrector
