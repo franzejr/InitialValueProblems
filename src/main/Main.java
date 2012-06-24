@@ -26,12 +26,12 @@ public class Main {
 			//result = euler.backward(discretValue, numPoints);
 			
 			/*Modified */
-			//result = euler.modified(discretValue, numPoints);
+			result = euler.modified(discretValue, numPoints);
 		
 		/*Testing Runge-Kutta */
 			
 			RungeKutta rk = new RungeKutta();
-			result = rk.solve(discretValue, numPoints);
+			//result = rk.solve(discretValue, numPoints);
 		
 		/*Testing Predictor-Corrector */
 			PredictorCorrector predictorCorrector = new PredictorCorrector();
