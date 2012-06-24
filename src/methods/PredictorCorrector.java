@@ -58,8 +58,6 @@ public class PredictorCorrector implements EDOSolver {
 		for(int i = 2; i < result.length -1 ; i++, t += discretValue ){
 			
 			/*Fase Preditora */
-			int entrou = 0;
-			
 			       un = edo.df(t,result[i]);
 			un_menos1 = edo.df(t - discretValue,result[i-1]);
 		
@@ -80,13 +78,10 @@ public class PredictorCorrector implements EDOSolver {
 				//Salvando o corretor antigo
 				corretorAntigo = corretor;
 				
-				entrou++;
-				
+
 			}while(Math.abs(corretorAntigo-corretor) > 0.00000000001);
 			
-			System.out.println("entrou:"+entrou);
 			result[i+1] = corretor;
-			System.out.println("result: "+result[i+1]+"disc.: "+ (t+discretValue));
 		}
 		
 		return result;

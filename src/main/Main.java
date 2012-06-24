@@ -10,8 +10,9 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		double discretValue = 0.00001;
-		int numPoints = (int)(4.92/discretValue);
+		double discretValue = 0.01;
+//		int numPoints = (int)(4.92/discretValue);
+		int numPoints = 2000;
 		
 //		RungeKutta rk = new RungeKutta();
 		//EDOSolver rk2 = new RungeKutta();
