@@ -20,7 +20,7 @@ public class Main {
 		Euler euler = new Euler();
 		
 			/*Forward */
-			result = euler.forward(discretValue, numPoints);
+			//result = euler.forward(discretValue, numPoints);
 			
 			/*Backward */
 			//result = euler.backward(discretValue, numPoints);
@@ -31,7 +31,7 @@ public class Main {
 		/*Testing Runge-Kutta */
 			
 			RungeKutta rk = new RungeKutta();
-			//result = rk.solve(discretValue, numPoints);
+			result = rk.solve(discretValue, numPoints);
 		
 		/*Testing Predictor-Corrector */
 			PredictorCorrector predictorCorrector = new PredictorCorrector();
