@@ -13,14 +13,14 @@ public class Main {
 	public static void main(String[] args) {
 		/*Discret Value and number of points */
 		double discretValue = 0.01;
-		int numPoints = (int) (4.92/discretValue);
+		int numPoints = (int) (4.92/discretValue) + 1;
 		double[] result;
 		
 		/*Testing Euler Methods */
 		Euler euler = new Euler();
 		
 			/*Forward */
-			//result = euler.forward(discretValue, numPoints);
+			result = euler.forward(discretValue, numPoints);
 			
 			/*Backward */
 			//result = euler.backward(discretValue, numPoints);
@@ -31,7 +31,7 @@ public class Main {
 		/*Testing Runge-Kutta */
 			
 			RungeKutta rk = new RungeKutta();
-			result = rk.solve(discretValue, numPoints);
+			//result = rk.solve(discretValue, numPoints);
 		
 		/*Testing Predictor-Corrector */
 			PredictorCorrector predictorCorrector = new PredictorCorrector();
