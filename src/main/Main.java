@@ -3,6 +3,7 @@ package main;
 import methods.EDOSolver;
 import methods.Euler;
 import methods.PredictorCorrector;
+import methods.RungeKutta;
 
 public class Main {
 
@@ -10,33 +11,37 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/*Discret Value and number of points */
 		double discretValue = 0.01;
-//		int numPoints = (int)(4.92/discretValue);
-		int numPoints = 2000;
+		int numPoints = (int) (4.92/discretValue);
+		double[] result;
 		
-//		RungeKutta rk = new RungeKutta();
-		//EDOSolver rk2 = new RungeKutta();
-//		EDO edo = new EDO();
+		/*Testing Euler Methods */
 		Euler euler = new Euler();
-		//ss.modified(discreteValue);
-//		EDOSolver euler = new Euler();
-		//euler.forward(discretValue,numPoints);
-		euler.backward(discretValue,numPoints);
-		//euler.backward(edo, 0.01);
-		//euler.modified(edo, 0.01);
-//		double result[] = rk.solve(0.01);
 		
+			/*Forward */
+			//result = euler.forward(discretValue, numPoints);
+			
+			/*Backward */
+			//result = euler.backward(discretValue, numPoints);
+			
+			/*Modified */
+			//result = euler.modified(discretValue, numPoints);
 		
-////		/*Testing Predictor-Corrector */
-//		PredictorCorrector predictorCorrector = new PredictorCorrector();
-//		double result[] = predictorCorrector.execute(discretValue, numPoints);
-//		
-//		for (double r : result) {
-//			System.out.println(r +"\n");
-//		}
-//		
-//		MainFrame m = new MainFrame();
-//		m.setVisible(true);
+		/*Testing Runge-Kutta */
+			
+			RungeKutta rk = new RungeKutta();
+			result = rk.solve(discretValue, numPoints);
+		
+		/*Testing Predictor-Corrector */
+			PredictorCorrector predictorCorrector = new PredictorCorrector();
+			//result = predictorCorrector.execute(discretValue, numPoints);
+			
+		/*Printing */
+		for (double r : result) {
+			System.out.println(r +"\n");
+		}
+	
 
 	}
 
